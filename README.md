@@ -1,0 +1,1 @@
+Hexo theme for my personal blog at [vizzini.me/blog](https://vizzini.me/blog)

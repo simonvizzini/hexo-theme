@@ -1,0 +1,93 @@
+*, *:after, *:before
+  box-sizing: border-box
+
+#container
+  display: flex
+  flex-direction: column
+  align-items: center
+  line-height: 1.5
+
+#wrapper
+  width: 100%
+  max-width: $max-content-width
+  padding: 0 1em
+  margin-top: 2em
+
+html
+  font-family: OpenSans
+  font-weight: 300
+  font-size: 18px
+  color: $text-color
+  background-color: $grey-2
+
+body
+  height: 100%
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 400
+
+a
+  color: $link-color
+  text-decoration: none
+  transition: color .3s ease
+  font-weight: 400
+  &:hover
+    color: $link-color-hover
+
+code
+  background-color: $grey-3
+  padding: .15em .3em
+  border-radius: .25em
+
+p
+  code
+    font-size: 0.9em
+
+pre
+  code
+    width: 100%;
+    display: block;
+    font-size: .75em
+    padding: 1em
+
+strong, b
+  font-weight: 600
+
+blockquote
+  margin: 1em 0
+  padding: .1em 1.2em
+  background-color: $grey-2
+  border-left: 5px solid $grey-8
+
+  footer
+    margin: 1em 0
+    strong
+      margin-right: 1em
+
+  &.warning
+    background-color: $yellow-1
+    border-left-color: $yellow-8
+
+  &.info
+    background-color: $blue-1
+    border-left-color: $blue-8
+
+.highlight
+  margin: 1em 0
+  font-size: .75em
+  background-color: $grey-3
+  overflow: auto
+
+  table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+    td.gutter
+      width: 2em
+      pre
+        margin: 0
+        padding: .75em
+        color: $grey-5
+    td.code
+      pre
+        margin: 0 0 0 1em

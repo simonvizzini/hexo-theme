@@ -1,0 +1,102 @@
+.article
+  background-color: $grey-1
+  margin: 0 0 3em 0
+  border: 1px solid $grey-4
+  border-radius: .5em
+  padding: 0em 1em
+  position: relative
+
+  .article-meta
+    border-bottom: 1px solid $grey-4
+    border-top-left-radius: 1em
+    border-top-right-radius: 1em
+    margin: 1em 0
+
+    .article-title
+      font-size: 2em
+      margin: 0
+      line-height: 1.25
+
+      a.article-link
+        font-weight: 400
+        display: inline-block
+        color: $text-color
+        &:hover
+          color: $grey-7
+
+    .article-date
+      font-size: .75em
+      margin: .75em 0
+
+  .article-content
+    h1
+      font-size: 2em
+      margin: .7em 0
+    h2, h3, h4, h5
+      padding: .4em 0 .15em
+
+    .article-more-link
+      margin: 1em 0
+
+    > table
+      border-collapse: collapse
+      border-spacing: 0px
+      empty-cells: show
+      border: 1px solid $grey-4
+      width: 100%
+      margin: 1em 0
+
+      th, td
+        border: 1px solid $grey-4
+        padding: 8px 16px
+        text-align: left
+
+      th
+        white-space: nowrap
+        color: #333
+        font-weight: 600
+        border-bottom-width: 2px
+        &[align="right"]
+          text-align: right
+
+      tr:nth-child(odd)
+        td
+          background-color: $grey-2
+      tr:nth-child(even)
+        td
+          background-color: #fff
+
+    p
+      img 
+        max-width: 100%  
+
+  .article-footer
+    .article-tags-wrapper
+      margin: 1rem 0
+      display: flex
+      align-items: center
+      font-size: .75em
+      span
+        font-weight: 400
+
+      .article-tag-list
+        margin: 0 0 0 1rem
+        padding: 0
+        list-style-type: none
+
+        .article-tag-list-item
+          margin-right: .5rem
+          display: inline-block
+
+          a
+            padding: .075rem .3rem
+            color: $blue-10
+            background-color: $blue-2
+            border: 1px solid $blue-5
+            cursor: pointer
+            transition: all .3s ease
+
+            &:hover
+                color: $deep-orange-10
+                background-color: $deep-orange-1
+                border: 1px solid $deep-orange-5

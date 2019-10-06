@@ -1,0 +1,36 @@
+$max-toc-width = 15em
+
+.article-toc
+  position: fixed
+  top: 4.7em
+  right: 0
+  padding-right: 1em
+  max-width: $max-toc-width
+  text-align: right
+  li
+    list-style-type: none
+    line-height: 1.5
+  ol
+    list-style-type: none
+    padding-left: 0
+    margin: 0
+
+  .toc-level-2
+    font-size: 1em
+    > a
+      font-weight: 600
+    &:before
+      content: "#"
+      color: $deep-orange-6
+      margin-right: .2rem
+  .toc-level-3,
+  .toc-level-4,
+  .toc-level-5,
+  .toc-level-6
+    font-size: .85em
+
+$max-width = 2 * $max-toc-width + $max-content-width
+
+@media screen and (max-width: $max-width)
+  .article-toc
+    display: none

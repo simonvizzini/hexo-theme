@@ -1,0 +1,15 @@
+<header id="header">
+  <div id="header-title">
+    <a href="<%- url_for() %>" class="title-link"><%= config.title %></a>
+    <% if (config.subtitle) { %>
+    <h2><%= config.subtitle %></h2>
+    <% } %>
+  </div>
+  <div id="header-nav">
+    <nav id="main-nav">
+      <% for (var entry in config.menu) { %>
+        <a class="main-nav-link" href="<%- url_for(config.menu[entry]) %>"><%= __(entry) %></a>
+      <% } %>
+    </nav>
+  </div>
+</header>

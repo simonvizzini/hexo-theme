@@ -1,0 +1,29 @@
+<div id="archive-wrapper">
+  <% var last_year = ''; %>
+  <% page.posts.each(function (post) { %>
+    <% var cur_year = post.date.year(); %>
+
+    <% if (last_year !== cur_year) { %>
+        <h3><%- cur_year %></h3>
+    <% last_year = cur_year; } %>
+
+    <article class="archive-item">
+      <span class="archive-item-date"><%- date(post.date, config.date_format) %></span>
+      <span class="archive-item-link-wrapper">
+        <a class="archive-item-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+      </span>
+    </article>
+  <% }) %>
+
+  <% if (page.total > 1){ %>
+    <nav class="pagination">
+      <%- paginator({
+        // prev_text: "&laquo; Prev",
+        // next_text: "Next &raquo;"
+        prev_next: false,
+        end_size: 1,
+        mid_size: 2,
+      }) %>
+    </nav>
+  <% } %>
+</div>
